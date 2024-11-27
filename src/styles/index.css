@@ -1,0 +1,53 @@
+body{
+    /* padding: 2%; */
+    /* font-family: inherit; */
+}
+
+#landing-img{
+    width: 25%;
+    height: 25%;
+}
+
+#radios-container{
+    gap: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+#bmi-result-container{
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(to right, #345FF6, #587DFF);
+    border-radius: 2em 10em 10em 2em;
+}
+
+#bmi-description{
+    width: 70%;
+    padding: 6em;
+    background-image: url("../../assets/background.svg");
+    border-radius: 2em;
+    position: relative;
+    top: -3em;
+}
+#features{
+    background-image: linear-gradient(130deg, #FFFFFF 50%, rgba(214, 230, 254, 0.4)) ;
+    width: 98vw;
+    margin-top: 10vh;
+    border-radius: 2em;
+}
+
+#features div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.icon{
+    width: 25%;
+    height: 25%;
+}
+/* #bmi-calculator{
+    display: flex;
+} */
