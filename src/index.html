@@ -12,11 +12,18 @@
 <body>
 
   <div id="bmi-calculator" class="d-flex p-2">
-    <div id="bmi-description">
+    <div id="bmi-description-container" class="d-flex-col justify-content-center align-items-center">
+      <img src="../assets/logo.svg" alt="logo">
+      <div>
+        <h2>Body Mass Index Calculator</h2>
+        <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>  
+      </div>
+    </div>
+    <!-- <div id="bmi-description-container">
       <h2>Body Mass Index Calculator</h2>
       <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>  
-    </div>
-    <div>
+    </div> -->
+    <div id="bmi-form-container" class="card">
       <h4>Enter your details below</h4>
       <form class="flex-col" id="bmi-form">
           <div class="d-flex align-items-center mb-2" id="radios-container">
@@ -48,12 +55,14 @@
           
       </form>
   
-      <div class="d-flex p-2 align-items-end" id="bmi-result-container">
-        <div class="d-flex-col">
-          <h6>Your BMI is...</h6>
-          <h3 id="bmi-result">11.1</h3>
+      <div class="d-flex-col p-2 align-items-end" id="bmi-result-container">
+        <div class="d-flex-col p-2">
+          <h6>Welcome!</h6>
+          <div class="flex-row-container">
+            <!-- <p id="bmi-result"></p> -->
+            <p id="bmi-suggestion" style="color: white;">Enter your height and weight and you’ll see your BMI result here</p>
+          </div>
         </div>
-        <p id="bmi-suggestion">...</p>
   
       </div>
 
