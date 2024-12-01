@@ -6,6 +6,56 @@ body{
     /* font-family: inherit; */
 }
 
+.txt-blue{
+    color: #345FF6;
+}
+
+.txt-gray{
+    color: #5E6E85;
+}
+.txt-s{
+    font-size: 14px;
+}
+
+.txt-m{
+    font-size: 20px;
+}
+
+.txt-semibold{
+    font-weight: 500;
+}
+.border{
+    border-radius: 0.5em;
+    border-color: #D8E2E7;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+.border:hover{
+    border-color: #345FF6 !important;
+    cursor: pointer;
+}
+
+
+.block{
+    display: block;
+}
+
+input{
+    border: 0px;
+}
+
+.width-m{
+    width: 14em;
+}
+
+.width-s{
+    width: 7em;
+}
+
+.mb-s{
+    margin-bottom: 2em;
+}
 #landing-img{
     width: 25%;
     height: 25%;
@@ -72,8 +122,9 @@ body{
     border: 0px;
 }
 
+/* might be changed */
 p{
-    color: #5E6E85;
+    color: #5E6E85; 
 }
 
 .flex-row-container{
@@ -88,6 +139,10 @@ p{
     text-align: center;
 }
 
-/* #bmi-calculator{
-    display: flex;
-} */
+.hide{
+    display: none !important;
+}
+
+span{
+    margin-right: 1em;
+}
