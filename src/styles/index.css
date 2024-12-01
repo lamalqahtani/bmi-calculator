@@ -45,6 +45,14 @@ input{
     border: 0px;
 }
 
+.width-xl{
+    width: 21em;
+}
+
+.width-l{
+    width: 19em;
+}
+
 .width-m{
     width: 14em;
 }
@@ -55,6 +63,10 @@ input{
 
 .mb-s{
     margin-bottom: 2em;
+}
+
+.mb-xs{
+    margin-bottom: 1em;
 }
 #landing-img{
     width: 25%;
