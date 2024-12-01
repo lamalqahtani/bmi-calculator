@@ -48,7 +48,7 @@ input{
 .width-xl{
     width: 21em;
 }
-
+ 
 .width-l{
     width: 19em;
 }
@@ -68,6 +68,19 @@ input{
 .mb-xs{
     margin-bottom: 1em;
 }
+
+.radio{
+    background-color: #FFFFFF;
+    border-color: #5E6E85;
+    font-size: larger;
+}
+
+.radio:hover{
+    background-color: #FFFFFF;
+    border-color: #345FF6;
+    cursor: pointer;
+}
+
 #landing-img{
     width: 25%;
     height: 25%;
