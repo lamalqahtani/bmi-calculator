@@ -182,7 +182,7 @@ span{
 }
 
 
-@media (max-width:800px)  {
+@media (max-width:820px)  {
 
     #bmi-description-container{
         display: block;
@@ -247,7 +247,24 @@ span{
     }
 }
 
-@media (max-width:320px)  {
+@media (max-width:450px)  {
+    #bmi-description-container{
+        width: 100vw;
+        margin: 0px;
+    }
+    #bmi-form-container{
+        position: absolute;
+        top: 38vh;
+        left: 2vh;
+        width: 94vw;
+    }
+    #radios-container{
+        justify-content: start;
+    }
+    
+    #explain-container{
+        padding-top: 30vh;
+    }
 
     #bmi-result-container{
         width: 90%;
