@@ -247,7 +247,7 @@ span{
     }
 }
 
-@media (min-width:320px)  {
+@media (max-width:320px)  {
 
     #bmi-result-container{
         width: 90%;
