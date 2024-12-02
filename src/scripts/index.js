@@ -1,6 +1,9 @@
 // globals
 form = document.getElementById("bmi-form");
 metric = document.getElementById("metric");
+metricContainer = document.getElementById("metric-inputs");
+impreialContainer = document.getElementById("impreial-inputs");
+
 
 heightCS = document.getElementById("height");
 weightKG = document.getElementById("weight");
@@ -18,10 +21,18 @@ bmiResult = "";
 
 // Form event listener
 form.addEventListener("change", (e)=>{
+    
+    if(metric.checked){ 
+        metricContainer.classList.remove("hide");
+        impreialContainer.classList.add("hide");
+    }else{
+        metricContainer.classList.add("hide");
+        impreialContainer.classList.remove("hide");
+    } 
+    
     if(metric.checked && heightCS.value != 0 && weightKG.value != 0){
         bmiValue = weightKG.value/heightCS.value/heightCS.value * 10000;
     }
-
 
     if(bmiValue < 18.5){
         bmiResult = "underweigh"
