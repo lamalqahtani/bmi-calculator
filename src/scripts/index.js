@@ -22,6 +22,7 @@ bmiResult = "";
 // Form event listener
 form.addEventListener("change", (e)=>{
     
+    // Hide the unchecked unit inputs
     if(metric.checked){ 
         metricContainer.classList.remove("hide");
         impreialContainer.classList.add("hide");
@@ -30,8 +31,13 @@ form.addEventListener("change", (e)=>{
         impreialContainer.classList.remove("hide");
     } 
     
+    // Calculate the BMI based in the unit checked
     if(metric.checked && heightCS.value != 0 && weightKG.value != 0){
         bmiValue = weightKG.value/heightCS.value/heightCS.value * 10000;
+    }else{
+        height = (heightFT.value * 12) + (heightIN.value*1);
+        weight = (weightST.value * 14) + (weightLBS.value*1);
+        bmiValue = weight/(height*height)*703;
     }
 
     if(bmiValue < 18.5){
@@ -44,7 +50,17 @@ form.addEventListener("change", (e)=>{
         bmiResult = "obese"
     }
 
-    bmiTxt = `Your BMI suggests you’re a ${bmiResult}. Your ideal weight is between <b> ${(heightCS.value*heightCS.value/10000*18.5).toFixed(1)} - ${(heightCS.value*heightCS.value/10000*24.9).toFixed(1)}. </b>`
+    if(metric.checked){
+        bmiTxt = `Your BMI suggests you’re a ${bmiResult}. Your ideal weight is between <b> ${(heightCS.value*heightCS.value/10000*18.5).toFixed(1)} kg - ${(heightCS.value*heightCS.value/10000*24.9).toFixed(1)} kg. </b>`
+    }else{
+        stValueMin = ((18.5/703*height*height)/14).toFixed(0);
+        lbsValueMin = ((18.5/703*height*height)/14).toString().split(".")[1].slice(0,2);
+
+        stValueMax = ((24.9/703*height*height)/14).toFixed(0);
+        lbsValueMax = ((24.9/703*height*height)/14).toString().split(".")[1].slice(0,2);
+        
+        bmiTxt = `Your BMI suggests you’re a ${bmiResult}. Your ideal weight is between <b> ${stValueMin}st ${lbsValueMin}lbs - ${stValueMax}st ${lbsValueMax}lbs. </b>`
+    }
 
     bmiResultParent.innerHTML = `
     <div class="d-flex-col p-2">
